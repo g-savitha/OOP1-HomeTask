@@ -8,9 +8,9 @@ export class Triangle extends Shape {
     y2: number;
     x3: number;
     y3: number;
-    private v1: Point;
-    private v2: Point;
-    private v3: Point;
+    public v1: Point;
+    public v2: Point;
+    public v3: Point;
     constructor(
         v1: Point,
         v2: Point,
@@ -25,7 +25,9 @@ export class Triangle extends Shape {
     }
 
     public toString(): string {
-        return Triangle.toString();
+        return `Triangle[v1=${(this.v1.x, this.v1.y)},v2=${
+            (this.v2.x, this.v2.y)
+        },v3=${(this.v3.x, this.v3.y)}]`;
     }
 
     getType(): string {
@@ -36,6 +38,6 @@ export class Triangle extends Shape {
             return `isosceles triangle`;
         else if (this.v1 == this.v2 && this.v2 == this.v3 && this.v1 == this.v3)
             return `equilateral triangle`;
-        else return `scalene triangle`;
+        return `scalene triangle`;
     }
 }
