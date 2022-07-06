@@ -29,13 +29,13 @@ export class Triangle extends Shape {
     }
 
     getType(): string {
-        if (this.v1 == this.v2 && this.v2 == this.v3 && this.v1 == this.v3)
-            return `equilateral triangle`;
-        else if (
+        if (
             (this.v1 == this.v2 && this.v2 == this.v3) ||
             (this.v2 == this.v3 && this.v1 == this.v3)
         )
             return `isosceles triangle`;
+        else if (this.v1 == this.v2 && this.v2 == this.v3 && this.v1 == this.v3)
+            return `equilateral triangle`;
         else return `scalene triangle`;
     }
 }

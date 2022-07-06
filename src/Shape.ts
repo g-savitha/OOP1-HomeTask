@@ -22,7 +22,7 @@ export abstract class Shape {
             this.filled ? 'filled' : 'not filled'
         }. Points : ${this.points}`;
     }
-    public getPerimeter(): Point {
+    public getPerimeter(): number | Point {
         return this.point1.distance(this.point2);
     }
 }

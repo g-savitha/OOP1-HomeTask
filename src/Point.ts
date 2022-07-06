@@ -10,10 +10,10 @@ export class Point {
     public toString(): string {
         return Point.toString();
     }
-    // let point : number | Point;
-    distance(): number;
-    distance(p: Point): Point;
-    distance(p?: number, q?: number): number {
+
+    distance(): number | Point;
+    distance(other: Point): number | Point;
+    distance(p?: any, q?: any): number | Point {
         return Math.sqrt(Math.pow(p - this.x, 2) + Math.pow(q - this.y, 2));
     }
 }
